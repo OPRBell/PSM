@@ -1,0 +1,68 @@
+/*************************************************|
+| The breakpoint mixin, this will probably suit   |
+| your needs, but feel free to hack it if it      |
+| doesn't                                         |
+*************************************************/
+
+@mixin bp($point) {
+
+    @media (min-width: $point) {
+      @content;
+    }
+  
+  }
+  
+  @mixin bp-max($point) {
+  
+    @media (max-width: $point) {
+      @content;
+    }
+  
+  }
+
+/*************************************************|
+| The rgba mixin                                  |
+*************************************************/
+
+@mixin rgba($val) {
+    background-color: rgba(0, 0, 0, $val);
+}
+
+@mixin rgba-background($color, $val) {
+    background-color: rgba($color, $val);
+}
+
+/*************************************************|
+| The rgba overlay mixin                          |
+*************************************************/
+
+
+@mixin rgba-overlay($val) {
+    &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        content: '';
+        z-index: 1;
+        @include rgba($val);
+    }
+}
+
+/*************************************************|
+| The transition mixin                            |
+*************************************************/
+  
+
+@mixin transition($prop, $style) {
+    transition: $prop $transition_time $style;
+  }
+  
+  @mixin transition-delay($prop, $style, $delay) {
+    transition: $prop $transition_time $style $delay;
+  }
+  
+  @mixin transition-time($prop, $style, $time) {
+    transition: $prop $time $style;
+  }
