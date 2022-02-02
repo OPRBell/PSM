@@ -7,6 +7,7 @@ A small project starter kit.
 - Image optimisation (via Parcel’s [imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) plugin)
 - SVG icon sprite creation (via Parcel’s [svg-sprite](https://github.com/Epimodev/parcel-plugin-svg-sprite))
 - Node Sass
+- Csstyle
 
 ## Install:
 
